@@ -1,5 +1,4 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import * as request from 'supertest';
 import { UserModule } from './../src/user.module';
 import {Injectable} from "@nestjs/common";
 import {Client, ClientGrpc} from '@nestjs/microservices';
@@ -13,9 +12,9 @@ describe('AppController (e2e)', () => {
       @Client({
         transport: Transport.GRPC,
         options: {
-          url: 'localhost:50051',
-          package: 'user_service',
-          protoPath: join(__dirname, '../src/protobufs/user-service.proto'),
+          url: 'localhost:8891',
+          package: 'user_module',
+          protoPath: join(__dirname, '../src/protobufs/user-module.proto'),
           loader: {
             arrays: true
           }

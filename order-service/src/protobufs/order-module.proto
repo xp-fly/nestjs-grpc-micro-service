@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package product_module;
+package order_module;
 
 // 返回的响应格式
 message OrderDataResponse {
@@ -11,7 +11,7 @@ message OrderDataResponse {
 
 message OrderData {
     int32 id = 1;
-    int32 name = 2;
+    string name = 2;
 }
 
 // 获取产品请求格式

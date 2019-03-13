@@ -1,15 +1,19 @@
 import {Controller} from "@nestjs/common";
 import {GrpcMethod} from '@nestjs/microservices'
 import {product_module} from "../protobufs/grpc-service-interface";
+import {Observable} from "rxjs";
 
 @Controller()
-export class OrderController {
+export class OrderController implements product_module.OrderService{
   @GrpcMethod('OrderService')
-  async getList(param: product_module.QueryListRequest) {
-    console.log(param);
-    return [{
-      id: 1,
-      name: '订单',
-    }];
+  getList(request: product_module.QueryListRequest): Observable<product_module.OrderDataResponse> {
+    return {
+      code: 200,
+      message: 'success',
+      data: [{
+        id: 1,
+        name: 'order'
+      }]
+    } as any;
   }
 }
