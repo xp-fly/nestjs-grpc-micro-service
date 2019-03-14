@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package order_module;
+
+// 返回的响应格式
+message OrderDataResponse {
+    int32 code = 1;
+    string message = 2;
+    repeated OrderData data = 3;
+}
+
+message OrderData {
+    int32 id = 1;
+    string name = 2;
+}
+
+// 获取产品请求格式
+message QueryListRequest {
+    int32 pageNo = 1;
+    int32 pageSize = 2;
+}
+
+service OrderService {
+    rpc GetList (QueryListRequest) returns (OrderDataResponse) {
+    }
+}

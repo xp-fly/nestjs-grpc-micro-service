@@ -1,7 +1,7 @@
 import * as grpc from 'grpc';
 import { Observable } from 'rxjs';
-/** Namespace product_module. */
-export namespace product_module {
+/** Namespace order_module. */
+export namespace order_module {
 
     /** Contains all the RPC service clients. */
     export interface ClientFactory {
@@ -9,7 +9,7 @@ export namespace product_module {
         /**
          * Returns the OrderService service client.
          */
-        getOrderService(): product_module.OrderService;
+        getOrderService(): order_module.OrderService;
     }
 
     /** Builder for an RPC service server. */
@@ -19,7 +19,7 @@ export namespace product_module {
          * Adds a OrderService service implementation.
          * @param impl OrderService service implementation
          */
-        addOrderService(impl: product_module.OrderService): product_module.ServerBuilder;
+        addOrderService(impl: order_module.OrderService): order_module.ServerBuilder;
     }
 
     /** Properties of an OrderDataResponse. */
@@ -32,7 +32,7 @@ export namespace product_module {
         message?: (string|null);
 
         /** OrderDataResponse data */
-        data?: (product_module.OrderData[]|null);
+        data?: (order_module.OrderData[]|null);
     }
 
     /** Properties of an OrderData. */
@@ -42,7 +42,7 @@ export namespace product_module {
         id?: (number|null);
 
         /** OrderData name */
-        name?: (number|null);
+        name?: (string|null);
     }
 
     /** Properties of a QueryListRequest. */
@@ -64,6 +64,6 @@ export namespace product_module {
          * @param metadata Optional metadata
          * @returns Promise
          */
-        getList(request: product_module.QueryListRequest, metadata?: grpc.Metadata): Observable<product_module.OrderDataResponse>;
+        getList(request: order_module.QueryListRequest, metadata?: grpc.Metadata): Observable<order_module.OrderDataResponse>;
     }
 }

@@ -1,1 +1,11 @@
 port: 8888
+grpcService:
+  -
+    package: user_module
+    url: 127.0.0.1:8891
+  -
+    package: product_module
+    url: 127.0.0.1:8890
+  -
+    package: order_module
+    url: 127.0.0.1:8889

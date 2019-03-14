@@ -1,12 +1,15 @@
 import {Module} from "@nestjs/common";
-import {GrpcClientFactory} from "../../grpc/grpc-client.factory";
 import {UserService} from "./services/user.service";
 import {UserController} from "./controllers/user.controller";
+import {GrpcClientModule} from "../../grpc/grpc-client.module";
 
 @Module({
-  imports: [],
+  imports: [GrpcClientModule.forClientServices([{
+    package: 'user_module',
+    services: ['UserService']
+  }])],
   controllers: [UserController],
-  providers: [GrpcClientFactory, UserService],
+  providers: [UserService],
 })
 export class UserModule {
 }

@@ -1,21 +1,18 @@
-import {Inject, Injectable, OnModuleInit} from "@nestjs/common";
-import {GrpcClientFactory} from "../../../grpc/grpc-client.factory";
+import {Injectable} from "@nestjs/common";
 import {user_module} from "../../../grpc/service-interface";
+import {InjectGrpcClient} from "../../../grpc/decorators";
+import {ClientGrpcProxy} from "@nestjs/microservices";
 
 @Injectable()
-export class UserService implements OnModuleInit {
-  onModuleInit() {
-    this.userService = this.grpcClientFactory.userModuleClient.getService('UserService');
-  }
+export class UserService {
 
   constructor(
-    @Inject(GrpcClientFactory) private grpcClientFactory: GrpcClientFactory,
+    @InjectGrpcClient('user_module') private grpcClient: ClientGrpcProxy,
   ) {
   }
 
-  private userService: user_module.UserService;
-
   async login(body) {
-    return await this.userService.login(body);
+    const userService: user_module.UserService = this.grpcClient.getService('UserService');
+    return await userService.login(body);
   }
 }
