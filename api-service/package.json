@@ -26,6 +26,7 @@
     "@nestjs/microservices": "^5.7.4",
     "grpc": "^1.19.0",
     "nestjs-configure": "^0.1.6",
+    "nestjs-grpc-client": "^0.1.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",

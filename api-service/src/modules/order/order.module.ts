@@ -1,5 +1,5 @@
 import {Module} from "@nestjs/common";
-import {GrpcClientModule} from "../../grpc/grpc-client.module";
+import {GrpcClientModule} from "nestjs-grpc-client";
 import {OrderController} from "./controllers/order.controller";
 
 @Module({

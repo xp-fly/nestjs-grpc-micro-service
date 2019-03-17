@@ -1,5 +1,5 @@
 import {Controller, Get} from "@nestjs/common";
-import {InjectGrpcClientService} from "../../../grpc/decorators";
+import {InjectGrpcClientService} from 'nestjs-grpc-client';
 import {order_module} from "../../../grpc/service-interface";
 
 @Controller('order')

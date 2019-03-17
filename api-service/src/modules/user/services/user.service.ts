@@ -1,6 +1,6 @@
 import {Injectable} from "@nestjs/common";
 import {user_module} from "../../../grpc/service-interface";
-import {InjectGrpcClient} from "../../../grpc/decorators";
+import {InjectGrpcClient} from "nestjs-grpc-client";
 import {ClientGrpcProxy} from "@nestjs/microservices";
 
 @Injectable()

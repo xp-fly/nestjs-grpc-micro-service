@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  api-service:
+    build: ./api-service/.
+    container_name: api-service
+    image: api-service
+    ports:
+      - 8888:8888
+  order-service:
+    build: ./order-service/.
+    container_name: order-service
+    image: order-service
+    ports:
+      - 8889:8889
+  product-service:
+    build: ./product-service/.
+    container_name: product-service
+    image: product-service
+    ports:
+      - 8890:8890
+  user-service:
+    build: ./user-service/.
+    container_name: user-service
+    image: user-service
+    ports:
+      - 8891:8891
