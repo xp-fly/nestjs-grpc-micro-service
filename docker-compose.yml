@@ -7,21 +7,25 @@ services:
     image: api-service
     ports:
       - 8888:8888
+    entrypoint: ["sh", "entrypoint.d/entrypoint.sh"]
   order-service:
     build: ./order-service/.
     container_name: order-service
     image: order-service
     ports:
       - 8889:8889
+    entrypoint: ["sh", "entrypoint.d/entrypoint.sh"]
   product-service:
     build: ./product-service/.
     container_name: product-service
     image: product-service
     ports:
       - 8890:8890
+    entrypoint: ["sh", "entrypoint.d/entrypoint.sh"]
   user-service:
     build: ./user-service/.
     container_name: user-service
     image: user-service
     ports:
       - 8891:8891
+    entrypoint: ["sh", "entrypoint.d/entrypoint.sh"]

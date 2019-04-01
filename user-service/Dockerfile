@@ -2,9 +2,9 @@ FROM node:10.15.1
 
 WORKDIR /app
 
-ADD package.json /app/package.json
-RUN npm install
+COPY entrypoint.d /entrypoint.d
 
-ADD . /app
+COPY package.json /app/package.json
+RUN npm install --registry=https://registry.npm.taobao.org
 
-CMD ["npm", "run", "start"]
+COPY . /app
