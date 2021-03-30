@@ -4342,13 +4342,18 @@ negotiator@0.6.1:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
   integrity sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
 
-nestjs-configure@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/nestjs-configure/-/nestjs-configure-0.1.4.tgz#5632d12b2efda1d1e3dbb27ec2e3d47e966a7702"
-  integrity sha512-C0rBnmk8VovE6UZACV+blUqTpXTKLUHPPaBIJxCrd2zZQjXXUCdr2D68i3Z8V0GmvI3zghzoJTp63sEH3LuSIg==
+nestjs-configure@^0.1.6:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/nestjs-configure/-/nestjs-configure-0.1.10.tgz#bf6c34834680d5dc65e8da26a4a00d7067201fc5"
+  integrity sha512-WlcOH0tw2W08rDEz/EK7qsqpNxIHulu3bhMdmPROlfG80NVvfoCPjEhvDbRN+Vy7jVvF4WGo3lCRoF1hbS8Tnw==
   dependencies:
     dotenv "^6.2.0"
     yamljs "^0.3.0"
+
+nestjs-grpc-client@^0.1.2:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/nestjs-grpc-client/-/nestjs-grpc-client-0.1.8.tgz#d8f59ee287b09402afdd2f7ba84ee17ec91095d8"
+  integrity sha512-EqjWdy2v/aCWm9kMOsKz0S00okqhkVz76RP/OocJsHriVOFtANEYWUEoqVxNHyt/QdTdRMrN9aN548Wu2EF5Ow==
 
 next-tick@1, next-tick@^1.0.0:
   version "1.0.0"
@@ -6446,9 +6451,9 @@ xtend@^4.0.0:
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 
 y18n@^3.2.0, y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 yallist@^2.1.2:
   version "2.1.2"
